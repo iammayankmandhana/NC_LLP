@@ -1,16 +1,14 @@
-
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.action_chains import ActionChains
 import os
 
-# the full program is written in main function using chromedriver
-
+# the program is written in main function using chromewebdriver
 from selenium import webdriver
 
 # with chrome interface displaying to the user
 driver = webdriver.Chrome(r"C:/Users/chromedriver.exe")
-driver.get("https://www.saucedemo.com/")
+driver.get("https://www.saucedemo.com/") 
 
 # login page
 folder = driver.find_element_by_xpath("//input[@data-test='username']")
@@ -54,5 +52,6 @@ folder.send_keys("600089")
 folder = driver.find_element_by_xpath("//input[@value='CONTINUE']")
 folder.click()
 
+# final landing page
 folder = driver.find_element_by_xpath("//*[text()='FINISH']")
 folder.click()
